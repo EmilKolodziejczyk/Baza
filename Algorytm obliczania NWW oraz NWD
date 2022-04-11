@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    //NWD
+    int a;
+    int b;
+    int nwd;
+
+    cout << "podaj liczbe 1" << endl;
+    cin >> a;
+    cout << "podaj liczbe 2" << endl;
+    cin >> b;
+
+    while (a != b) {
+        if (a < b)
+            b = b - a;
+        else
+            a = a - b;
+    }
+    cout << a << endl;
+
+    cout << "----------------------------------------------" << endl;
+
+    //NWW
+
+    int c;
+    int d;
+    int e;
+    int nww; //iloczyn
+
+    cout << "podaj liczbe 1" << endl;
+    cin >> c;
+    cout << "podaj liczbe 2" << endl;
+    cin >> d;
+
+    e = c * d;
+    while (c != d) {
+        if (c < d)
+            d = d - c;
+        else
+            c = c - d;
+    }
+    nww = e / c;
+    cout << nww << endl;
+
+    return 0;
+}
