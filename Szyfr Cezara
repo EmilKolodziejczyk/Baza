@@ -1,0 +1,70 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+void szyfrowanie(char wyraz[], int klucz);
+
+int main()
+{
+	//to działa
+	//char tar[200];
+   // cin >> tar;
+   // tar[0] += 2;
+	//cout << tar << endl;
+
+	int klucz;
+	char wyraz[200];
+	char wybor;
+
+	cout << "podaj klucz" << endl;
+	cin >> klucz;
+	cout << "podaj wyraz" << endl;
+	cin >> wyraz;
+
+	szyfrowanie(wyraz, klucz);
+	cout << "Zaszyfrowane : " << wyraz << endl;
+	cout << "Czy chcesz rozszyfrować? t/n :  \n";
+	cin >> wybor;
+	if (wybor == 't')
+	{
+		szyfrowanie(wyraz, -klucz);
+		cout << "po rozszyfrowaniu : " << wyraz;
+	}
+	if (wybor == 'n')
+	{
+		exit;
+	}
+	//wyraz[0] += 2;
+	//cout << wyraz << endl;
+
+}
+
+void szyfrowanie(char wyraz[], int klucz) {
+	int dlugosc;
+	dlugosc = strlen(wyraz);
+	if (!(klucz >= -26 && klucz <= 26)) {
+		return;
+	}
+	if (klucz >= 0) {
+		for (int i = 0; i < dlugosc; i++) {
+			if (wyraz[i] + klucz <= 'z') {
+				wyraz[i] += klucz;
+			}
+			else {
+				wyraz[i] = wyraz[i] + klucz - 26;
+			}
+		}
+
+	}
+	else
+	{
+		for (int i = 0; i < dlugosc; i++) {
+			if (wyraz[i] + klucz >= 'a') {
+				wyraz[i] += klucz;
+			}
+			else {
+				wyraz[i] = wyraz[i] + klucz + 26;
+			}
+		}
+	}
+}
