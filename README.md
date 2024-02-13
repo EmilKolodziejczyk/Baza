@@ -1,3 +1,2 @@
-# Test
-Edycja test
-.
+# Baza
+Baza moich wszystkich prac
