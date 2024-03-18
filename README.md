@@ -1,2 +1,2 @@
 # Repozytorium
-Baza moich wszystkich prac w ciagu paru lat pracy.
+Baza moich wszystkich prac.
